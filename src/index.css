@@ -1,7 +1,13 @@
+@font-face {
+  font-family: "pokemon";
+  src: url("./fonts/pokemon.woff") format("woff"),
+       url("./fonts/pokemon.woff2") format("woff2");
+}
+
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'pokemon', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -11,4 +17,11 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+#root{
+  display: flex;
+  align-items: center;
+
+  min-height: 100vh;
 }

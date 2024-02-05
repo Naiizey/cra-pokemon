@@ -3,6 +3,6 @@
     "source.fixAll.eslint": "explicit"
   },
   "stylelint.validate": ["css", "javascript"],
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "jest.jestCommandLine": "npm run test --"
 }

@@ -1,9 +1,17 @@
 .PokemonCard {
-  max-width: 150px;
-  padding: 0.8rem;
-  border-radius: 5px;
+  width: 160px;
+  padding: 0.5rem;
+  border-radius: 15px;
   background-color: #121212;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.PokemonCard h2{
+  max-height: 1.25rem;
+  overflow-y: hidden;
 }
 
 .PokemonCard:hover {
@@ -16,13 +24,14 @@
 }
 
 .PokemonCard-image {
-  width: 85px;
   height: 85px;
+  max-width: 175px;
 }
 
 .PokemonCard-name {
   margin-top: 0;
   margin-bottom: 0.4rem;
+  font-size: .75rem;
 }
 
 .PokemonCard-types {
@@ -38,11 +47,11 @@
   align-items: center;
 }
 
-.PokemonCard-type img {
+.PokemonCard-type .PokemonCard-type-image {
   width: 20px;
   height: 20px;
 }
 
-.PokemonCard-type span {
+.PokemonCard-type .PokemonCard-type-text {
   font-size: 0.5rem;
 }

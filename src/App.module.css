@@ -1,0 +1,97 @@
+.App {
+  min-height: 95vh;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 5vw;
+  background-color: red;
+}
+
+.App-header {
+  font-size: calc(10px + 2vmin);
+}
+
+.App-form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+}
+
+.App-pokemons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.75rem;
+}
+
+.App-pokemons, .App-poke-desc{
+  background-color: #d7d7d7;
+  border: .75vw solid rgba(0, 0, 0, 0.75);
+  border-radius: 5vw;
+
+  padding: 1.75rem;
+
+  height: 86.5vh;
+  width: 97.75vw;
+}
+
+.App-selection {
+  margin: 0 1rem;
+  border-radius: 5px;
+  background-color: #007fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.App-buttons-ul{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 90vw;
+  gap: .5vh;
+  margin: 0;
+}
+
+.App-buttons-ul .App-button{
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 2.5vw;
+  background-color: #282c34;
+  cursor: pointer;
+  font-size: .75rem;
+  padding: 0;
+}
+
+.App-buttons-ul .App-button.App-curr-butt{
+  background-color: #007fff;
+}
+
+.App-search-bar{
+  background-color: #282c34;
+  color: white;
+  border: none;
+  border-radius: .5vh;
+  height: 3vh;
+}
+
+.App-shiny{
+  position: absolute;
+  top: 0;
+  right: 20vw;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.App-shiny svg{
+  height: 3vw;
+}
