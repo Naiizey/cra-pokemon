@@ -20,14 +20,14 @@ const App = () => {
         let [currButt, setCurrButt] = useState(0);
         let [startIndex, setStartIndex] = useState(0);
 
-        let [search, setSearch] = useState("");
-
         let [dataPokes, setDataPokes] = useState(startPokes);
         let [avPokemons, setAvPokemons] = useState(Pokemons)
 
         let [currPoke, setCurrPoke] = useState(dataPokes[0])
 
         let pages = []
+
+        let search = "";
 
         for (let i = 1; i < avPokemons.length; i += nbPokePage) {
             pages.push(Math.ceil(i / nbPokePage));
@@ -42,12 +42,9 @@ const App = () => {
         }
 
         useEffect(() => {
-            console.log(`setAvPokemons : ${setAvPokemons(Pokemons.filter((elem) => (elem.name.toLowerCase().includes(search))))}`);
-            console.log(`search : ${search}`);
-            console.log(`setDataPokes : ${setDataPokes(avPokemons.slice(startIndex, startIndex + nbPokePage))}`);
-        //eslint-disable-next-line
-        }, [search, nbPokePage, startIndex]);
-
+            setDataPokes(avPokemons.slice(startIndex, startIndex + nbPokePage));
+        }, [avPokemons])
+        
         useEffect(() => {
             setDataPokes(avPokemons.slice(startIndex, startIndex + nbPokePage));
         //eslint-disable-next-line
@@ -71,13 +68,10 @@ const App = () => {
                         }
                         placeholder = 'Recherche'
                         type = "search"
-                        onChange = {() => {
-                                setStartIndex(currButt)
-                        }}
                         onInput = {
                             (e) => {
-                                console.log(e.target.value === "");
-                                console.log(`setSearch : ${setSearch((e.target.value).toLowerCase())}`)
+                                search = (e.target.value).toLowerCase();
+                                setAvPokemons(Pokemons.filter((elem) => (elem.name.toLowerCase().includes(search))));
                             }
                         }
                     />
